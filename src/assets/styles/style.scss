@@ -1,0 +1,66 @@
+:root {
+  /*Main Colors*/
+  --main-color: #0C2B68;
+  --primary-color: #4f8eff;
+  --acent-color: #06c491;
+  --complementary-color: #f5bb06;
+  --disabled-text-color: #9c9b9c;
+  --outline-color: #dadce0;
+  --background-color: #d4d4d431;
+  --text-color: #212121;
+  --shadow-color: #004dd210;
+  --shadow-hover-color: #00000050;
+  --error-color: #cb4335;
+  --text-secondary-color: #757575;
+
+  /*Color for backgounds oupaque*/
+  --main-background-color: #fe6f6150;
+  --main-hover-color: #ff9283;
+
+  /*For primary buttons blue*/
+  --hover-primary-color: #699cfb;
+  --pressed-primary-color: #3979f1c9;
+  --primary-background-color: #8cb1f6a2;
+  /*For success buttons*/
+  --hover-accent-color: #41ddb3;
+  --pressed-accent-color: #0ac392;
+
+  --course-main-color: #2471a3;
+  --course-secondary-color: #5dade2;
+  --mask-color: #d4e6f199;
+}
+
+@font-face {
+  font-family: 'OS Regular';
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+*{
+  font-family: 'OS Regular';
+}
+
+.text-white{
+  color: white;
+}
+
+.ml-1{
+  margin-left: 1em;
+}
+
+.text-headline {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.text-body1 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.ant-menu-horizontal > .ant-menu-item a{
+  color: white;
+}
+
+.ant-menu{
+  color: white
+}
