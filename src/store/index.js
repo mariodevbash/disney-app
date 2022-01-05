@@ -1,12 +1,10 @@
 import { createStore } from 'vuex'
+import characters from '@/modules/disney/store/characters'
 
-export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+const store = createStore({
   modules: {
+    characters
   }
 })
+
+export default store

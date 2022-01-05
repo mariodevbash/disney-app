@@ -7,13 +7,13 @@
 
     <a-menu class="menu-nav text-body1" mode="horizontal" theme="light">
       <a-menu-item key="personajes">
-        <router-link :to="{ name: 'Home' }">
+        <router-link :to="{ name: 'general-view' }">
           <ion-icon name="person"></ion-icon>
           Personajes
         </router-link>
       </a-menu-item>
       <a-menu-item key="about">
-        <router-link :to="{ name: 'About' }">
+        <router-link :to="{ name: 'search-character', params: {id: '1'} }">
           <ion-icon name="search"></ion-icon>
           Buscar Personaje
         </router-link>

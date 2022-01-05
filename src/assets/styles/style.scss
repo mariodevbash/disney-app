@@ -1,12 +1,12 @@
 :root {
   /*Main Colors*/
-  --main-color: #0C2B68;
+  --main-color: #0c2b68;
   --primary-color: #4f8eff;
   --acent-color: #06c491;
   --complementary-color: #f5bb06;
   --disabled-text-color: #9c9b9c;
   --outline-color: #dadce0;
-  --background-color: #d4d4d431;
+  --background-color: hsla(0, 0%, 59%, 0.192);
   --text-color: #212121;
   --shadow-color: #004dd210;
   --shadow-hover-color: #00000050;
@@ -31,19 +31,32 @@
 }
 
 @font-face {
-  font-family: 'OS Regular';
+  font-family: "OS Regular";
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 
-*{
-  font-family: 'OS Regular';
+@font-face {
+  font-family: "OS SemiBold";
+  src: url(../fonts/OpenSans-Semibold.ttf);
 }
 
-.text-white{
+* {
+  font-family: "OS Regular";
+}
+
+.text-white {
   color: white;
 }
 
-.ml-1{
+.text-black {
+  color: rgb(54, 54, 54) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ml-1 {
   margin-left: 1em;
 }
 
@@ -57,10 +70,54 @@
   font-size: 1rem;
 }
 
-.ant-menu-horizontal > .ant-menu-item a{
+.text-title {
+  font-size: 32px;
+  font-family: "OS SemiBold";
+}
+
+.ant-menu-horizontal > .ant-menu-item a {
   color: white;
 }
 
-.ant-menu{
-  color: white
+.ant-menu {
+  color: white;
+}
+
+.ant-row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.ant-col:first-child {
+  padding-left: 0 !important;
+}
+
+.ant-col:last-child {
+  padding-right: 0 !important;
+}
+
+.layout-background {
+  background-color: var(--background-color);
+  height: inherit;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.card__button {
+  transition: 0.3s !important;
+
+  &:hover {
+    color: var(--main-color) !important;
+    font-size: 20px !important;
+    transition: 0.3s !important;
+    position: relative;
+  }
 }
