@@ -99,6 +99,7 @@
 .layout-background {
   background-color: var(--background-color);
   height: inherit;
+  min-height: 100vh;
 }
 
 .fade-enter-active,
@@ -120,4 +121,8 @@
     transition: 0.3s !important;
     position: relative;
   }
+}
+
+.spinner__full-screen{
+  min-height: 100vh;
 }
