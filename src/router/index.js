@@ -5,7 +5,12 @@ const routes = [
   {
     path: '/disney',
     ...disneyRouter
-  }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "not-found-view" */ '@/modules/ui/views/NotFound.vue')
+  },
 ]
 
 const router = createRouter({
