@@ -30,7 +30,9 @@ export default defineComponent({
   setup() {
     const route = useRoute();
     const { menus } = useMenus();
-    
+
+    // TODO: Terminar el estado del navbar para guardar el estado  
+
     const current = ref([`${route.meta.key}`]);
     return {
       current,
