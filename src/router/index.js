@@ -3,13 +3,17 @@ import disneyRouter from '@/modules/disney/router'
 
 const routes = [
   {
+    path: '',
+    redirect: {name: 'general-view'}
+  },
+  {
     path: '/disney',
     ...disneyRouter
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import(/* webpackChunkName: "not-found-view" */ '@/modules/ui/views/NotFound.vue')
+    component: () => import(/* webpackChunkName: "not-found-view" */ '@/modules/common/views/NotFound.vue')
   },
 ]
 

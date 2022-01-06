@@ -5,17 +5,16 @@
       <span class="text-headline ml-1 text-white">Disney</span>
     </div>
 
-    <a-menu class="menu-nav text-body1" mode="horizontal" theme="light">
-      <a-menu-item key="personajes">
-        <router-link :to="{ name: 'general-view' }">
-          <ion-icon name="person"></ion-icon>
-          Personajes
-        </router-link>
-      </a-menu-item>
-      <a-menu-item key="about">
-        <router-link :to="{ name: 'search-character', params: {id: '1'} }">
-          <ion-icon name="search"></ion-icon>
-          Buscar Personaje
+    <a-menu
+      :selectedKeys="current"
+      class="menu-nav text-body1"
+      mode="horizontal"
+      theme="light"
+    >
+      <a-menu-item v-for="menu in menus" :key="menu.key">
+        <router-link :to="{ name: menu.routeName }">
+          <ion-icon :name="menu.icon"></ion-icon>
+          {{ menu.name }}
         </router-link>
       </a-menu-item>
     </a-menu>
@@ -25,13 +24,17 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
+import useMenus from "@/modules/ui/composables/useMenus";
 
 export default defineComponent({
   setup() {
     const route = useRoute();
-    const current = ref([route.path]);
+    const { menus } = useMenus();
+    
+    const current = ref([`${route.meta.key}`]);
     return {
       current,
+      menus,
     };
   },
 });
