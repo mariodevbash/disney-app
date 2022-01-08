@@ -4,6 +4,10 @@ export const getCharacters = (state, payload) => {
     state.perPage = payload.count
 }
 
+export const getCharacterDetails = (state, payload) => {
+    state.characterDetails = payload
+}
+
 export const setLoading = (state, payload) => {
     state.isLoading = payload
 }

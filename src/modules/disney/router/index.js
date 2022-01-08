@@ -10,7 +10,7 @@ export default {
         }
     },
     {
-        path: 'search',
+        path: 'search/:id',
         name: 'search-character',
         component: () => import(/* webpackChunkName: "disney-search-character" */ '@/modules/disney/views/SearchCharacter.vue'),
         meta: {

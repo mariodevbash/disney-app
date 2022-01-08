@@ -6,6 +6,10 @@ export const allCharacters = (state) => {
     return state.characters
 }
 
+export const characterDetails = (state) => {
+    return state.characterDetails
+}
+
 export const perPage = (state) => {
     return state.perPage
 }

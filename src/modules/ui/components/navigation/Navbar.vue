@@ -6,13 +6,13 @@
     </div>
 
     <a-menu
-      :selectedKeys="current"
       class="menu-nav text-body1"
       mode="horizontal"
       theme="light"
+      :selectedKeys="selectedMenu"
     >
-      <a-menu-item v-for="menu in menus" :key="menu.key">
-        <router-link :to="{ name: menu.routeName }">
+      <a-menu-item v-for="menu in menus" :key="menu.key" @click="activeMenu(menu.key)" :class="menu.selected ? 'ant-menu-item-selected' : ''">
+        <router-link :to="{ name: menu.routeName, params: menu.params }">
           <ion-icon :name="menu.icon"></ion-icon>
           {{ menu.name }}
         </router-link>
@@ -22,21 +22,24 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { useRoute } from "vue-router";
 import useMenus from "@/modules/ui/composables/useMenus";
 
 export default defineComponent({
   setup() {
     const route = useRoute();
-    const { menus } = useMenus();
+    const { setActiveMenu, clearActiveMenu, menus, selectedMenu } = useMenus()
 
-    // TODO: Terminar el estado del navbar para guardar el estado  
+    setActiveMenu(route.meta.key)
 
-    const current = ref([`${route.meta.key}`]);
     return {
-      current,
       menus,
+      activeMenu: (menuKey) => {
+        clearActiveMenu()
+        setActiveMenu(menuKey)
+      },
+      selectedMenu
     };
   },
 });

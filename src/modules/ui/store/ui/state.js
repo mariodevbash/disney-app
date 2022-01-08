@@ -6,6 +6,7 @@ export default () => ({
             name: "Personajes",
             selected: false,
             routeName: "general-view",
+            params: {}
         },
         {
             key: 2,
@@ -13,6 +14,9 @@ export default () => ({
             name: "Buscar Personaje",
             selected: false,
             routeName: "search-character",
+            params: {
+                id: 7
+            }
         }
     ]
 })

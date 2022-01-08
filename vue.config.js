@@ -4,7 +4,7 @@ module.exports = {
       less: {
         lessOptions: {
           modifyVars: {
-            "primary-color": "#4f8eff", //Primary
+            "primary-color": "#0c2b68", //Primary
             "secondary-color": "#4f8EFF",
             "link-color": "#ED723D", //Link
             "success-color": "#28B463", //Success
