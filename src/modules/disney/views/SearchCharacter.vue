@@ -94,6 +94,7 @@ export default {
 
     form.characterId = route.params.id;
 
+    //TODO: Poner notificacion de error y desplegar los demas datos
     const fetchError = (errorInfo) => {
       console.log("Failed:", errorInfo);
     };
